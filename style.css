@@ -1,6 +1,4 @@
-/* style.css */
-
-/* Reset and base styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +11,7 @@ html, body {
   overflow: hidden;
 }
 
-
+/* Background Container */
 .container {
   min-height: 100vh;
   display: flex;
@@ -21,10 +19,22 @@ html, body {
   justify-content: space-between;
   align-items: center;
   position: relative;
+
+  /* Sharp High-Quality Background */
+  background-image: url("background-img.png");
+  background-position: center;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+ background-attachment: scroll;
+
+
+  /* Improve clarity */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
-
-/* Optional subtle dark overlay */
+/* Overlay (no blur) */
 .overlay {
   position: absolute;
   top: 0;
@@ -35,53 +45,51 @@ html, body {
   z-index: 1;
 }
 
-/* Center content */
+/* Center Content */
 .content {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
   text-align: center;
+  z-index: 2;
   padding: 20px;
 }
 
-/* Glass box */
+/* Glass Box - clean, soft glass */
 .glass-box {
-  background: linear-gradient(135deg, rgba(65, 18, 86, 0.55), rgba(65, 18, 86, 0.35));
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(15px);
+  background: rgba(65, 18, 86, 0.45);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 0px;
   padding: 50px 70px;
-  text-align: center;
   color: #fff;
-  z-index: 3;
   transition: all 0.4s ease;
+  z-index: 3;
 }
 
 /* Logo */
 .glass-box .logo img {
   width: 600px;
   height: auto;
-  background: transparent;
   margin-bottom: 15px;
 }
 
-/* Headings */
+/* Heading */
 .glass-box h1 {
   font-family: 'Sofia Sans', sans-serif;
   font-size: 5rem;
   font-weight: 700;
   margin: 15px 0;
   color: #fff;
-  text-shadow: 
+  text-shadow:
     0 2px 5px rgba(0, 0, 0, 0.3),
-    0 0 10px rgba(255, 255, 255, 0.2); 
+    0 0 10px rgba(255, 255, 255, 0.2);
   letter-spacing: 1px;
 }
 
-/* Contact info */
+/* Contact Info */
 .glass-box .contact-info {
   font-size: 1rem;
   line-height: 1.7;
@@ -102,8 +110,8 @@ footer {
   padding: 40px 0;
   text-align: center;
   width: 100%;
-  z-index: 2;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  z-index: 2;
 }
 
 footer a {
@@ -112,7 +120,7 @@ footer a {
   font-weight: 500;
 }
 
-/* Responsive Tablet */
+/* Tablet */
 @media (max-width: 768px) {
   .glass-box {
     padding: 35px 40px;
@@ -123,8 +131,7 @@ footer a {
   }
 
   .glass-box h1 {
-    font-size:  2.4rem;
-    letter-spacing: 0.5px;
+    font-size: 2.4rem;
   }
 
   .glass-box .contact-info {
@@ -132,7 +139,7 @@ footer a {
   }
 }
 
-/* Responsive Mobile */
+/* Mobile */
 @media (max-width: 480px) {
   .glass-box {
     width: 95%;
@@ -145,8 +152,7 @@ footer a {
 
   .glass-box h1 {
     font-size: 2.3rem;
-    letter-spacing: 0.3px;
-    text-shadow: 
+    text-shadow:
       0 1px 3px rgba(0, 0, 0, 0.3),
       0 0 5px rgba(255, 255, 255, 0.2);
   }
